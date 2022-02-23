@@ -11,6 +11,6 @@ import reactor.core.publisher.Mono;
 public class HelloHandler {
 
     public Mono<ServerResponse> sayHello(ServerRequest request) {
-        return ServerResponse.ok().contentType(MediaType.APPLICATION_JSON).body(BodyInserters.fromValue("Hello Tanzu Supply Chain"));
+        return ServerResponse.ok().contentType(MediaType.APPLICATION_JSON).body(BodyInserters.fromValue("Hello Tanzu Supply Chain -  Git Update"));
     }
 }
