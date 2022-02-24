@@ -1,0 +1,20 @@
+---
+apiVersion: carto.run/v1alpha1
+kind: Workload
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/part-of: hello-tanzu-supply-chain
+    apps.tanzu.vmware.com/workload-type: web
+  name: hello-tanzu-supply-chain
+  namespace: developer
+spec:
+  source:
+    git:
+      ref:
+        branch: main
+      url: https://github.com/pksheldon4/hello-tanzu-supply-chain
+  build:
+    env:
+      - name: BP_JVM_VERSION
+        value: "17"

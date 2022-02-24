@@ -14,7 +14,7 @@
     <name>hello-tanzu-supply-chain</name>
     <description>hello-tanzu-supply-chain</description>
     <properties>
-        <java.version>11</java.version>
+        <java.version>17</java.version>
     </properties>
     <dependencies>
         <dependency>
