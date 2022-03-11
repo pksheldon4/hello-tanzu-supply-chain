@@ -5,9 +5,9 @@ metadata:
   creationTimestamp: null
   labels:
     app.kubernetes.io/part-of: hello-tanzu-supply-chain
+    apps.tanzu.vmware.com/has-tests: "true"
     apps.tanzu.vmware.com/workload-type: web
   name: hello-tanzu-supply-chain
-  namespace: developer
 spec:
   source:
     git:
@@ -17,4 +17,4 @@ spec:
   build:
     env:
       - name: BP_JVM_VERSION
-        value: "17"
+        value: "17.*"
