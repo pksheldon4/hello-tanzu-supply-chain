@@ -3,11 +3,17 @@ apiVersion: carto.run/v1alpha1
 kind: Workload
 metadata:
   creationTimestamp: null
+  annotations:
+    autoscaling.knative.dev/initial-scale: "0"
+    autoscaling.knative.dev/min-scale: "2"
+    autoscaling.knative.dev/max-scale: "10"
+    autoscaling.knative.dev/scale-down-delay: "2m"
   labels:
     app.kubernetes.io/part-of: hello-tanzu-supply-chain
     apps.tanzu.vmware.com/has-tests: "true"
     apps.tanzu.vmware.com/workload-type: web
   name: hello-tanzu-supply-chain
+  namespace: psheldon
 spec:
   source:
     git:
@@ -17,4 +23,4 @@ spec:
   build:
     env:
       - name: BP_JVM_VERSION
-        value: "17"
+        value: "17.*"
