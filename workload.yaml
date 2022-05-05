@@ -5,8 +5,8 @@ metadata:
   creationTimestamp: null
   annotations:
     autoscaling.knative.dev/initial-scale: "0"
-    autoscaling.knative.dev/min-scale: "2"
-    autoscaling.knative.dev/max-scale: "10"
+    autoscaling.knative.dev/minScale: "2"
+    autoscaling.knative.dev/maxScale: "10"
     autoscaling.knative.dev/scale-down-delay: "2m"
   labels:
     app.kubernetes.io/part-of: hello-tanzu-supply-chain
