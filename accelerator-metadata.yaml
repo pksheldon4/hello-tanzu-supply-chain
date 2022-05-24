@@ -1,0 +1,11 @@
+---
+apiVersion: accelerator.apps.tanzu.vmware.com/v1alpha1
+kind: Accelerator
+metadata:
+  name: hello-tanzu-supply-chain
+spec:
+  git:
+    url: https://github.com/pksheldon4/hello-tanzu-supply-chain
+    ref:
+      branch: main
+      # tag: tap-1.1
